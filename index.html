@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flixx Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/spinner.css" />
+    <link rel="stylesheet" href="./lib/swiper.css" />
+    <link rel="stylesheet" href="./lib/swiper.js" />
+    <script src="./js/script.js" defer></script>
+    <script src="./lib/swiper.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/db79cfa3e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- This is main header section which has navigation -->
+    <header class="main-header">
+      <div class="container">
+        <div class="logo"><a href="./index.html">Flixx</a></div>
+        <nav>
+          <ul>
+            <li><a href="./index.html" class="nav-links">Movies</a></li>
+            <li><a href="./shows.html" class="nav-links">Tv Shows</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- This is slider section  -->
+    <section class="now-playing">
+      <h2>Now Playing</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <a href="movie-details.html">
+              <img src="./images/no-image.jpg" alt="Movie Title" />
+            </a>
+            <h4 class="swiper-rating">
+              <i class="fas fa-star text-secondary"></i> 8 / 10
+            </h4>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- This is movie or tv search section  -->
+    <section class="search">
+      <div class="container">
+        <div id="alert"></div>
+        <form action="./search.html" class="search-form">
+          <div class="search-radio">
+            <input type="radio" id="movie" name="type" value="movie" checked />
+            <label for="movie">Movies</label>
+            <input type="radio" id="tv" name="type" value="tv" />
+            <label for="tv">TV Shows</label>
+          </div>
+          <div class="search-flex">
+            <input
+              type="text"
+              placeholder="Enter Search term"
+              id="search-term"
+              name="search-term"
+            />
+            <button class="btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass fa-beat-fade"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- This is Popular Movie or Popular tv section  -->
+    <section class="container">
+      <h2>Popular Movies</h2>
+      <div class="popular-movies" id="grid">
+        <!-- This below cards are dummy data so we comment all those data, we will create them in js  -->
+        <!-- <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="./movie-details.html">
+            <img
+              src="./images/no-image.jpg"
+              alt="Movie Title"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Movie Title</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: XX/XX/XXXX</small>
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- This is footer section  -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="logo"><span>FLIXX</span></div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com"
+            class="facebookIcon"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.twitter.com" class="twitterIcon" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com"
+            class="instagramIcon"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <div class="spinner"></div>
+  </body>
+</html>
